@@ -1,21 +1,38 @@
 #TAKE INPUT FROM USER
-a, b = map(float, input("Enter three values (e.g., 1,3): ").split(",")) #STORE NO.S IN TWO DIFFERENT VARIABLES
+x, y = map(float, input("Enter three values (e.g., 1,3): ").split(",")) #STORE NO.S IN TWO DIFFERENT VARIABLES
 c=input("Enter an Operation ( + , - , * , / )    :  ") #STORE DESIRED OPERATOR IN A VARIABLE
+
+
+def add(a,b):
+  print(f"Sum Of {a} {c} {b} is : ",a+b)
+
+def sub(a,b):
+  print(f"Difference Of {a} {c} {b} is : ",a-b)
+
+def mul(a,b):
+  print(f"Product Of {a} {c} {b} is : ",a*b)
+  
+
+def div(a,b):
+  print(f"Quotient Of {a} {c} {b} is : ",a/b)
+  
+  
+
 
 
 #APPLY CONDITIONS USING CONDITIONAL STATEMENTS
 if c=="+":  #CONDITION FOR ADDITION
-  print(f"Sum Of {a} {c} {b} is : ",a+b)
+  add(x,y) 
 
 elif c=="-":  #CONDITION FOR SUBTRACTION
-  print(f"Difference Of {a} {c} {b} is : ",a-b)
-
+  sub(x,y)
+  
 elif c=="*":  #CONDITION FOR MULTIPLICATION
-  print(f"Product Of {a} {c} {b} is : ",a*b)
+  mul(x,y)
 
 elif c=="/":  #CONDITION FOR DVISION
-  print(f"Quotient Of {a} {c} {b} is : ",a/b)
-
+  div(x,y)
+  
 else:  #CONDITION FOR NON INVALID FEATURES
   print("This Feature is Not Available yet!")
 
