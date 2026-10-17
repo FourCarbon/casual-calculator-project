@@ -18,3 +18,6 @@ elif c=="/":  #CONDITION FOR DVISION
 
 else:  #CONDITION FOR NON INVALID FEATURES
   print("This Feature is Not Available yet!")
+
+
+print("Good Bye!")
