@@ -3,6 +3,8 @@
 x, y = map(float, input("Enter two values separated by a space (e.g., 1 3): ").split()) 
 c = input("Enter an Operation ( + , - , * , / )    :  ") # STORE DESIRED OPERATOR IN A VARIABLE
 
+
+# using functions to handle operations
 def add(a, b):
     print(f"Sum Of {a} {c} {b} is : ", a + b)
 
