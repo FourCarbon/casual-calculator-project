@@ -1,40 +1,34 @@
-#TAKE INPUT FROM USER
-x, y = map(float, input("Enter three values (e.g., 1,3): ").split(",")) #STORE NO.S IN TWO DIFFERENT VARIABLES
-c=input("Enter an Operation ( + , - , * , / )    :  ") #STORE DESIRED OPERATOR IN A VARIABLE
+# TAKE INPUT FROM USER
+# correction in statement to say "two" instead of "three", and switched to space-separation for easier typing
+x, y = map(float, input("Enter two values separated by a space (e.g., 1 3): ").split()) 
+c = input("Enter an Operation ( + , - , * , / )    :  ") # STORE DESIRED OPERATOR IN A VARIABLE
 
+def add(a, b):
+    print(f"Sum Of {a} {c} {b} is : ", a + b)
 
-def add(a,b):
-  print(f"Sum Of {a} {c} {b} is : ",a+b)
+def sub(a, b):
+    print(f"Difference Of {a} {c} {b} is : ", a - b)
 
-def sub(a,b):
-  print(f"Difference Of {a} {c} {b} is : ",a-b)
+def mul(a, b):
+    print(f"Product Of {a} {c} {b} is : ", a * b)
 
-def mul(a,b):
-  print(f"Product Of {a} {c} {b} is : ",a*b)
-  
+def div(a, b):
+    # Added protection against dividing by zero
+    if b == 0:
+        print("Error: Cannot divide by zero!")
+    else:
+        print(f"Quotient Of {a} {c} {b} is : ", a / b)
 
-def div(a,b):
-  print(f"Quotient Of {a} {c} {b} is : ",a/b)
-  
-  
-
-
-
-#APPLY CONDITIONS USING CONDITIONAL STATEMENTS
-if c=="+":  #CONDITION FOR ADDITION
-  add(x,y) 
-
-elif c=="-":  #CONDITION FOR SUBTRACTION
-  sub(x,y)
-  
-elif c=="*":  #CONDITION FOR MULTIPLICATION
-  mul(x,y)
-
-elif c=="/":  #CONDITION FOR DVISION
-  div(x,y)
-  
-else:  #CONDITION FOR NON INVALID FEATURES
-  print("This Feature is Not Available yet!")
-
+# APPLY CONDITIONS USING CONDITIONAL STATEMENTS
+if c == "+":    # CONDITION FOR ADDITION
+    add(x, y) 
+elif c == "-":  # CONDITION FOR SUBTRACTION
+    sub(x, y)
+elif c == "*":  # CONDITION FOR MULTIPLICATION
+    mul(x, y)
+elif c == "/":  # CONDITION FOR DIVISION
+    div(x, y)
+else:           # CONDITION FOR INVALID FEATURES
+    print("This Feature is Not Available yet!")
 
 print("Good Bye!")
