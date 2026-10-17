@@ -1,13 +1,20 @@
-a, b = map(float, input("Enter three values (e.g., 1,3): ").split(","))
-c=input("Enter an Operation ( + , - , * , / )    :  ")
+#TAKE INPUT FROM USER
+a, b = map(float, input("Enter three values (e.g., 1,3): ").split(",")) #STORE NO.S IN TWO DIFFERENT VARIABLES
+c=input("Enter an Operation ( + , - , * , / )    :  ") #STORE DESIRED OPERATOR IN A VARIABLE
 
-if c=="+":
+
+#APPLY CONDITIONS USING CONDITIONAL STATEMENTS
+if c=="+":  #CONDITION FOR ADDITION
   print(f"Sum Of {a} {c} {b} is : ",a+b)
-elif c=="-":
+
+elif c=="-":  #CONDITION FOR SUBTRACTION
   print(f"Difference Of {a} {c} {b} is : ",a-b)
-elif c=="*":
+
+elif c=="*":  #CONDITION FOR MULTIPLICATION
   print(f"Product Of {a} {c} {b} is : ",a*b)
-elif c=="/":
+
+elif c=="/":  #CONDITION FOR DVISION
   print(f"Quotient Of {a} {c} {b} is : ",a/b)
-else:
+
+else:  #CONDITION FOR NON INVALID FEATURES
   print("This Feature is Not Available yet!")
